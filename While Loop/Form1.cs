@@ -15,6 +15,7 @@ namespace While_Loop
         public Form1()
         {
             InitializeComponent();
+
         }
     }
 }
