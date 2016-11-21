@@ -34,7 +34,8 @@
             this.startingTextbox = new System.Windows.Forms.TextBox();
             this.endingTextbox = new System.Windows.Forms.TextBox();
             this.valueButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.outputLabel = new System.Windows.Forms.Label();
+            this.starButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -89,23 +90,34 @@
             this.valueButton.TabIndex = 5;
             this.valueButton.Text = "Check Value!";
             this.valueButton.UseVisualStyleBackColor = true;
+            this.valueButton.Click += new System.EventHandler(this.valueButton_Click);
             // 
-            // label1
+            // outputLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.outputLabel.AutoSize = true;
+            this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Location = new System.Drawing.Point(34, 157);
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(0, 20);
+            this.outputLabel.TabIndex = 6;
+            // 
+            // starButton
+            // 
+            this.starButton.Location = new System.Drawing.Point(297, 194);
+            this.starButton.Name = "starButton";
+            this.starButton.Size = new System.Drawing.Size(84, 23);
+            this.starButton.TabIndex = 7;
+            this.starButton.Text = "Draw Stars";
+            this.starButton.UseVisualStyleBackColor = true;
+            this.starButton.Click += new System.EventHandler(this.starButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 261);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.starButton);
+            this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.valueButton);
             this.Controls.Add(this.endingTextbox);
             this.Controls.Add(this.startingTextbox);
@@ -127,7 +139,8 @@
         private System.Windows.Forms.TextBox startingTextbox;
         private System.Windows.Forms.TextBox endingTextbox;
         private System.Windows.Forms.Button valueButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.Button starButton;
     }
 }
 
