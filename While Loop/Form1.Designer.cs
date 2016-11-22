@@ -36,6 +36,7 @@
             this.valueButton = new System.Windows.Forms.Button();
             this.outputLabel = new System.Windows.Forms.Label();
             this.starButton = new System.Windows.Forms.Button();
+            this.fireworkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -103,7 +104,7 @@
             // 
             // starButton
             // 
-            this.starButton.Location = new System.Drawing.Point(297, 194);
+            this.starButton.Location = new System.Drawing.Point(297, 183);
             this.starButton.Name = "starButton";
             this.starButton.Size = new System.Drawing.Size(84, 23);
             this.starButton.TabIndex = 7;
@@ -111,11 +112,22 @@
             this.starButton.UseVisualStyleBackColor = true;
             this.starButton.Click += new System.EventHandler(this.starButton_Click);
             // 
+            // fireworkButton
+            // 
+            this.fireworkButton.Location = new System.Drawing.Point(297, 213);
+            this.fireworkButton.Name = "fireworkButton";
+            this.fireworkButton.Size = new System.Drawing.Size(84, 23);
+            this.fireworkButton.TabIndex = 8;
+            this.fireworkButton.Text = "Firework!";
+            this.fireworkButton.UseVisualStyleBackColor = true;
+            this.fireworkButton.Click += new System.EventHandler(this.fireworkButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 261);
+            this.Controls.Add(this.fireworkButton);
             this.Controls.Add(this.starButton);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.valueButton);
@@ -141,6 +153,7 @@
         private System.Windows.Forms.Button valueButton;
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Button starButton;
+        private System.Windows.Forms.Button fireworkButton;
     }
 }
 
