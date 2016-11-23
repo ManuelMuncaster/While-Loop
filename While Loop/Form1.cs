@@ -15,7 +15,6 @@ namespace While_Loop
     {
         int startingNum;
         int endingNum;
-
         int xPosition;
         int yPosition;
         int redColor;
@@ -24,6 +23,7 @@ namespace While_Loop
         int counter;
         int width;
         int height;
+        int pixels;
         public Form1()
         {
             InitializeComponent();
@@ -51,11 +51,12 @@ namespace While_Loop
             endingTextbox.Visible = false;
             valueButton.Visible = false;
             starButton.Visible = false;
+            fireworkButton.Visible = false;
+            outputLabel.Visible = false;
             Random randGen = new Random();
 
             while (counter < 100000)
             {
-               
                 Graphics formGraphics = this.CreateGraphics();
                 Pen drawPen = new Pen(Color.Black);
                 SolidBrush drawFill = new SolidBrush(Color.Black);
@@ -86,27 +87,35 @@ namespace While_Loop
             valueButton.Visible = false;
             starButton.Visible = false;
             fireworkButton.Visible = false;
+            outputLabel.Visible = false;
 
             Graphics g = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
 
-            //initialize
             int x = 200;
             int y = 250;
 
-            //test
             while (y >= 100)
             {
-                //act
                 g.Clear(Color.Black);
                 g.FillRectangle(drawBrush, x, y, 10, 10);
 
                 Thread.Sleep(10);
 
-                //change
                 y--;
+            }
 
+            x = 200;
+            pixels = 1;
 
+            while (pixels <= 100)
+            {
+                g.Clear(Color.Black);
+                g.FillEllipse(drawBrush, 200 - pixels / 2, 83 - pixels / 2, 10 + pixels, 10 + pixels);
+
+                Thread.Sleep(10);
+
+                pixels++;
             }
         }
     }
